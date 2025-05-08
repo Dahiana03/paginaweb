@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prestamos</title>
+    <link rel="icon" href="../img/icono-cesde.png" type="image/x-icon" sizes="192x192">
+    <link rel="stylesheet" href="styles_soleini.css">
+    
+</head>
+<header>
+<nav>
+    
+        <img src="./img/logo-cesde-blanco-sin-fondov2.png" alt="Logo CESDE"
+        width="420" 
+        height="240" 
+        alt="logo_Cesde">
+        
+    <ul>
+        <a href="Inicio.html"><li>Inicio</li></a>
+        <a href="Servicios.html"><li>Servicios</li></a>
+        <a href="Blog.html"><li>Blog</li></a>
+        <a href="Contacto.html"><li>Contacto</li></a>
+        <a href="Ubicacion.html"><li>Ubicación</li></a>
+        
+    </ul>    
+
+    <button class="iniciosesion" onclick="location.href='iniciar_sesion.html'">Iniciar Sesion</button>
+</nav>
+</header>
+<body>
+    <main>
+    <section class="formulario">
+        <h1>Solicitud de Préstamo de Equipos</h1>
+        <form>
+            <div class="grupo">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required="">
+            </div>
+            <div class="grupo">
+                <label for="documento">Número de Documento:</label>
+                <input type="text" id="documento" name="documento" required="">
+            </div>
+            <div class="grupo">
+                <label for="tipo-equipo">Tipo de Equipo:</label>
+                
+                <select id="tipo-equipo" name="tipo-equipo" required="">
+                    <option value="">Seleccione un equipo</option>
+                    <option value="desarrollo">Desarrollo de Software</option>
+                    <option value="diseño">Diseño Gráfico</option>
+                    <option value="ofimatica">Herramientas Ofimáticas</option>
+                </select>
+            </div>
+            <div class="grupo">
+                <label for="fecha">Fecha de Préstamo:</label>
+                <input type="date" id="fecha" name="fecha" required="">
+            </div>
+            <div class="grupo">
+                <label for="hora">Hora de Préstamo:</label>
+                <input type="time" id="hora" name="hora" required="">
+            </div>
+            <div class="grupo">
+                <button type="submit">Solicitar Préstamo</button>
+            </div>
+        </form>
+    </section>
+</main>
+
+
+</body>
+
+<footer>
+    <h6>© 2025 CESDE - Todos los derechos reservados.</h6>
+</footer>
+</html>
