@@ -100,6 +100,8 @@ main {
 
 .active{
     color:rgb(77, 38, 207);
+    animation-name: zoom;
+    animation-duration: 1s;
 }
 .deslizadores{
     position: relative;
@@ -115,7 +117,13 @@ main {
 
 .bloque1{
     display: flex;
-   
+    animation-name: transicion1;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     position: absolute;
     top: 0px;
@@ -131,7 +139,13 @@ main {
 
 .bloque2{
     display: flex;
-  
+    animation-name: transicion2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     position: absolute;
     top: 0px;
@@ -153,9 +167,13 @@ nav ul li a {
 }
 
 nav ul li a:hover{
-    color: rgb(88, 87, 87);
+    color: rgb(52, 97, 161);
     cursor: pointer;
     background-color: gray;
+    animation-name: zoom, change-color;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
 }
 
 h1{
@@ -185,7 +203,7 @@ footer{
     bottom: 0;
     bottom: 0;
 }
-/*
+
 @keyframes transicion1{
     0% {opacity: 1;}
     45% {opacity: 1;}
@@ -201,5 +219,18 @@ footer{
     50% {opacity: 1;}
     95% {opacity: 1; }
     100%{opacity: 0;}
+}
 
-}*/
+@keyframes zoom{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+@keyframes change-color{
+    0% { color: gray; }
+    25% { color: blue;}
+    50% { color: rgb(220, 223, 72)}
+    75% { color: rgb(75, 248, 83)}
+    100% { color: gray;}
+}

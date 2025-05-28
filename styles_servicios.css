@@ -63,11 +63,20 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: rgb(99, 99, 99);
+   color: rgb(52, 97, 161);
+    cursor: pointer;
+    background-color: gray;
+    animation-name: zoom, change-color;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
 }
 
 .active{
-    color: rgb(77, 38, 207);
+    
+    color:rgb(77, 38, 207);
+    animation-name: zoom;
+    animation-duration: 1s;
 }
 .iniciosesion{
     background-color:rgb(77, 38, 207);
@@ -110,7 +119,7 @@ main {
     display: flex;
     background-color: white;
     border-radius: 8px;
-    padding: 15px;
+    padding: 13px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     flex: 1 1 calc(30% - 4px);
@@ -119,16 +128,16 @@ main {
 .imagen{
     text-align: center;
     
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .textos{
-    text-align: center;
-    margin-left: 10px;
+    text-align:left;
+    margin-left: 25px;
 }
 
 .img{
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 
@@ -151,4 +160,18 @@ section div a{
 
 section div a:hover{
     text-decoration: underline;
+}
+
+@keyframes zoom{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+@keyframes change-color{
+    0% { color: gray; }
+    25% { color: blue;}
+    50% { color: rgb(220, 223, 72)}
+    75% { color: rgb(75, 248, 83)}
+    100% { color: gray;}
 }

@@ -24,6 +24,11 @@ header{
     height: 75px;
 }
 
+img{
+    text-align: center;
+
+}
+
 nav img{
     height: 45px;
     width: auto;
@@ -63,7 +68,13 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: rgb(88, 87, 87);
+    color: rgb(52, 97, 161);
+    cursor: pointer;
+    background-color: gray;
+    animation-name: zoom, change-color;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 3s;
 }
 
 .iniciosesion{
@@ -88,7 +99,9 @@ main{
 }
 
 .active{
-    color: rgb(77, 38, 207);
+    color:rgb(77, 38, 207);
+    animation-name: zoom;
+    animation-duration: 1s;
 }
 
 footer{
@@ -100,4 +113,31 @@ footer{
     width: 99%;
     bottom: 0;
     bottom: 0;
+}
+
+.contacto{
+    display:flow-root;
+    background-color: rgb(223, 199, 223);
+    border-radius: 10px;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 2px solid #ddd;
+    flex: 1 1 calc(10% - 4px);
+    display:grid;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@keyframes zoom{
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2);}
+    100% { transform: scale(1);}
+}
+
+@keyframes change-color{
+    0% { color: gray; }
+    25% { color: blue;}
+    50% { color: rgb(220, 223, 72)}
+    75% { color: rgb(75, 248, 83)}
+    100% { color: gray;}
 }
